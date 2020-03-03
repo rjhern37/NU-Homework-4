@@ -1,3 +1,19 @@
 .container{
-    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888888;
+    
+
 }
+
+#menuBtn {
+    justify-self: center;
+
+}
+
+#foot {
+    text-align: center;
+    }
+
