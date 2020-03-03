@@ -23,8 +23,17 @@
    let currentQuestion = 0
    let totalTime = 300
    let penaltyTime = 30 
+   let scoreOnScreen = document.getElementById('score')
+   let score = 0
+   let questionNumberOnScreen = document.getElementById('questionNumber')
+   let questionNumber = 1
 
+   function renderSpans(){
+       questionNumberOnScreen.innerHTML = questionNumber
+       scoreOnScreen.innerHTML = score
+   }
 
+renderSpans()
    
    let questions = [
        {
@@ -97,7 +106,15 @@
     
     function answerQuestion(event) { 
         if(event.target.matches("button")) {
-            event.target.getAttribute("data-correct")
+            if (event.target.getAttribute("data-correct")){
+                score += 10
+            } else {
+                alert('no dummy')
+            }
+            currentQuestion++
+            questionNumber++
+            renderQuestion()
+            renderSpans()
         }
 
 
