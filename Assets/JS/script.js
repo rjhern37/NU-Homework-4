@@ -78,7 +78,7 @@ renderSpans()
                a: "Hell Yes", 
                b: "No"
            }, 
-           rightAnswer: "b"
+           rightAnswer: "a"
         
         }
     ]
